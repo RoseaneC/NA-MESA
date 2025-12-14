@@ -47,4 +47,3 @@ na-mesa-vexia/
 - Tabelas são criadas automaticamente ao subir (create_all).
 - A API expõe `/health`, `/api/chat`, `/api/reset`, `/api/session/{id}`, `/admin`.
 - Logs no console mostram `session_id`, estado anterior e novo a cada mensagem.
-
