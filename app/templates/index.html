@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VEXIA - NA MESA</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <div>
+          <div class="brand-title">VEXIA – NA MESA</div>
+          <div class="brand-subtitle">Demo de conversa guiada</div>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span id="state-badge" class="badge">Estado: MENU</span>
+        <span id="demo-status" class="badge" style="display:none;">Executando demo…</span>
+        <button id="demo-btn" class="ghost-btn">Demo rápida</button>
+        <button id="reset-btn" class="ghost-btn">Reiniciar</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="chat-card">
+        <div id="chat-window" class="chat-window"></div>
+        <div id="quick-replies" class="quick-replies"></div>
+        <div class="composer">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Digite sua mensagem..."
+            autocomplete="off"
+          />
+          <button id="send-btn" class="primary-btn">Enviar</button>
+        </div>
+      </section>
+
+      <aside class="summary-card">
+        <h3>Resumo</h3>
+        <div class="summary-item">
+          <span class="label">Fluxo</span>
+          <span id="summary-fluxo">-</span>
+        </div>
+        <div class="summary-grid" id="summary-grid">
+          <!-- dynamically filled -->
+        </div>
+        <div class="hint">
+          Estado atual: <span id="summary-state">MENU</span>
+        </div>
+      </aside>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+

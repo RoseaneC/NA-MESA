@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - VEXIA</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="admin-body">
+    <header class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <div>
+          <div class="brand-title">Admin - VEXIA</div>
+          <div class="brand-subtitle">Sessões recentes</div>
+        </div>
+      </div>
+      <a href="/" class="ghost-btn">Voltar ao chat</a>
+    </header>
+
+    <main class="admin-table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Session ID</th>
+            <th>Estado</th>
+            <th>Atualizado</th>
+            <th>Contexto</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in sessions %}
+          <tr>
+            <td>{{ s.id }}</td>
+            <td>{{ s.state }}</td>
+            <td>{{ s.updated_at }}</td>
+            <td><code>{{ s.context }}</code></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
+
